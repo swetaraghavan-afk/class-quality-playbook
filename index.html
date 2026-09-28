@@ -405,11 +405,11 @@ reused: 25 instructional, 4 professionalism.</div>
 <div class="panel" id="p-evidence" role="tabpanel" aria-labelledby="t-evidence" hidden>
 
 <h2 style="margin-top:6px">Evidence</h2>
-<div class="sub2">What evidence appears in the hero card, the class report and the task list &mdash; and how much of it, decided by the score.</div>
+<div class="sub2">What evidence appears in the hero card, the weekly report, the class report and the task list &mdash; and how much of it, decided by the score.</div>
 
 <div class="scope">
-<div class="sc1"><b>Every class report shows both sides</b>
-<p>Positive and negative instances appear in every class report, subject to scoring. What is shown, and how much, follows the rubric score below.</p></div>
+<div class="sc1"><b>Class reports carry the negative side</b>
+<p>Negative instances appear in every class report, subject to scoring. Positive evidence appears only in the weekly report. What is shown, and how much, follows the rubric score below.</p></div>
 <div class="sc1"><b>Every flag is backed</b>
 <p>Every flagged parameter and sub-rubric carries negative evidence &mdash; the moment from the class &mdash; and a recommendation.</p></div>
 </div>
@@ -418,7 +418,7 @@ reused: 25 instructional, 4 professionalism.</div>
 <div class="sub2">One rubric each. Strongest is a rubric that scored 2; Weakest is a rubric that scored 0. When more than one rubric ties on 2 or on 0, the order of precedence decides.</div>
 <div class="vbar">
 <div class="vb vb--1"><b>Strongest</b>
-<p>The first rubric scored <b>2</b> in the order of precedence. Shown with one positive evidence.</p></div>
+<p>The first rubric scored <b>2</b> in the order of precedence. The rubric is highlighted &mdash; no positive evidence is shown on the hero card.</p></div>
 <div class="vb" style="border-left:4px solid var(--bad)"><b>Weakest</b>
 <p>The first rubric scored <b>0</b> in the order of precedence. Shown with one negative evidence and its recommendation.</p></div>
 </div>
@@ -439,25 +439,25 @@ reused: 25 instructional, 4 professionalism.</div>
 <div class="tw"><table style="min-width:900px">
 <thead><tr><th>Score</th><th>Verdict</th><th>Positive evidence</th><th>Negative evidence</th><th>Recommendation</th><th>Task</th></tr></thead>
 <tbody>
-<tr><td class="par"><span class="band"><i style="background:var(--good)"></i>2</span></td><td class="par">All Good</td><td class="v1">1 positive instance</td><td style="color:var(--ink-3)">None</td><td style="color:var(--ink-3)">None</td><td style="color:var(--ink-3)">No task</td></tr>
-<tr><td class="par"><span class="band"><i style="background:var(--warn)"></i>1</span></td><td class="par">Needs Work</td><td class="v1">1 positive instance</td><td class="amb" style="width:auto">All negative evidence &mdash; 1 per flagged sub-rubric</td><td class="rec" style="width:auto">1 per flagged sub-rubric</td><td>Task raised</td></tr>
+<tr><td class="par"><span class="band"><i style="background:var(--good)"></i>2</span></td><td class="par">All Good</td><td class="v1">1 instance in the weekly report &mdash; only if it is the Strongest rubric</td><td style="color:var(--ink-3)">None</td><td style="color:var(--ink-3)">None</td><td style="color:var(--ink-3)">No task</td></tr>
+<tr><td class="par"><span class="band"><i style="background:var(--warn)"></i>1</span></td><td class="par">Needs Work</td><td style="color:var(--ink-3)">None</td><td class="amb" style="width:auto">All negative evidence &mdash; 1 per flagged sub-rubric</td><td class="rec" style="width:auto">1 per flagged sub-rubric</td><td>Task raised</td></tr>
 <tr><td class="par"><span class="band"><i style="background:var(--bad)"></i>0</span></td><td class="par">Must Fix</td><td style="color:var(--ink-3)">None</td><td class="red" style="width:auto">All negative evidence &mdash; 1 per flagged sub-rubric</td><td class="rec" style="width:auto">1 per flagged sub-rubric</td><td>Task raised</td></tr>
 </tbody></table></div>
 
 <h3 class="h3">Positive evidence</h3>
 <div class="cards">
-<div class="card" style="border-left-color:var(--good)"><b>Reports only</b>
-<p>Positive evidence appears in the class report and nowhere else. It never generates a task.</p></div>
+<div class="card" style="border-left-color:var(--good)"><b>Weekly report only</b>
+<p>Positive evidence appears in the weekly report and nowhere else &mdash; not in the class report, not on the hero card. It never generates a task.</p></div>
 <div class="card" style="border-left-color:var(--good)"><b>Why it is there</b>
 <p>To highlight and motivate &mdash; so the coach keeps doing what a rubric is already meeting expectation on.</p></div>
 <div class="card" style="border-left-color:var(--good)"><b>How much</b>
-<p>One per parameter scored 2 or 1, so 0 to 5 per class report. None for a parameter scored 0.</p></div>
+<p>One per weekly report &mdash; for the top-rated rubric, the Strongest. None in any class report.</p></div>
 </div>
 
 <h3 class="h3">Negative evidence</h3>
 <div class="cards">
 <div class="card" style="border-left-color:var(--c-inst)"><b>Instructional Delivery</b>
-<p>Every flagged rubric and sub-rubric &mdash; one evidence each, with its recommendation. At Amber, one positive instance can sit alongside for the rubric.</p></div>
+<p>Every flagged rubric and sub-rubric &mdash; one evidence each, with its recommendation.</p></div>
 <div class="card" style="border-left-color:var(--c-prof)"><b>Professionalism</b>
 <p>One evidence for every flag &mdash; Camera angle, Lighting, Video, Audio.</p></div>
 <div class="card" style="border-left-color:var(--bad)"><b>Professionalism evidence is never green</b>
@@ -478,8 +478,9 @@ reused: 25 instructional, 4 professionalism.</div>
 <div class="tw"><table style="min-width:900px">
 <thead><tr><th>Surface</th><th>Positive</th><th>Negative</th><th>Recommendation</th></tr></thead>
 <tbody>
-<tr><td class="par">Hero card</td><td>1 &mdash; the Strongest rubric</td><td>1 &mdash; the Weakest rubric</td><td>With the Weakest</td></tr>
-<tr><td class="par">Class report</td><td>1 per parameter scored 2 or 1</td><td>All &mdash; 1 per flagged sub-rubric and Professionalism flag</td><td>1 per flag</td></tr>
+<tr><td class="par">Hero card</td><td style="color:var(--ink-3)">None &mdash; the Strongest rubric is highlighted, without evidence</td><td>1 &mdash; the Weakest rubric</td><td>With the Weakest</td></tr>
+<tr><td class="par">Weekly report</td><td>1 &mdash; for the Strongest rubric</td><td style="color:var(--ink-3)">&mdash;</td><td style="color:var(--ink-3)">&mdash;</td></tr>
+<tr><td class="par">Class report</td><td style="color:var(--ink-3)">None</td><td>All &mdash; 1 per flagged sub-rubric and Professionalism flag</td><td>1 per flag</td></tr>
 <tr><td class="par">Tasks</td><td style="color:var(--ink-3)">Never</td><td>1 per flagged sub-rubric and Professionalism flag</td><td>1 per flag</td></tr>
 </tbody></table></div>
 
