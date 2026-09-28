@@ -168,8 +168,8 @@ td.void { background:var(--inv-bg); color:var(--inv); font-weight:700;
 <div class="panel" id="p-playbook" role="tabpanel" aria-labelledby="t-playbook">
 
 <div class="hero" style="margin-top:6px">
-<div class="hero__tag">Class Quality Rating</div>
-<p style="font-size:19px;font-weight:700;letter-spacing:-.015em;line-height:1.35;max-width:78ch;text-wrap:balance">Class Quality Rating is the overall quality rating of a tutor, based on multiple parameters and scored over a Review Cycle.</p>
+<div class="hero__tag">Coaching Rating</div>
+<p style="font-size:19px;font-weight:700;letter-spacing:-.015em;line-height:1.35;max-width:78ch;text-wrap:balance">Coaching Rating is the overall quality rating of a tutor, based on multiple parameters and scored over a Review Cycle.</p>
 <p style="font-size:14px;color:var(--ink-2);margin-top:10px;max-width:78ch">It is a rating of <span class="band"><i style="background:var(--bad)"></i>Red</span>, <span class="band"><i style="background:var(--warn)"></i>Amber</span> or <span class="band"><i style="background:var(--good)"></i>Green</span>, set by bands of an internal score on a scale of 0 to 10.</p>
 </div>
 
@@ -191,7 +191,7 @@ td.void { background:var(--inv-bg); color:var(--inv); font-weight:700;
 
 <h3 class="h3">Rating &mdash; verb &amp; subtext</h3>
 <div class="sub2">What the coach reads on the hero card. The verb is the signal, the subtext says why.</div>
-<div class="sc1" style="margin-bottom:11px"><b>Subtext below the hero card</b><p>Your <b>Class Quality Rating</b> reflects how your classes delivered The Cuemath Way in your Review Cycle. <u>Read more here.</u></p></div>
+<div class="sc1" style="margin-bottom:11px"><b>Subtext below the hero card</b><p>Your <b>Coaching Rating</b> reflects how your classes delivered The Cuemath Way in your Review Cycle. <u>Read more here.</u></p></div>
 <div class="scope">
   <div class="sc1" style="border-left-color:var(--good)"><b><span class="band"><i style="background:var(--good)"></i>Green &middot; 8.5 and above</span> &mdash; Take a Bow!</b><p>Your classes are of exceptional delivery.</p></div>
   <div class="sc1" style="border-left-color:var(--good)"><b><span class="band"><i style="background:var(--good)"></i>Green &middot; 7 to &lt;8.5</span> &mdash; Shine On!</b><p>Your class delivery is up to the mark!</p></div>
@@ -222,7 +222,7 @@ td.void { background:var(--inv-bg); color:var(--inv); font-weight:700;
 <h3 class="h3">What the coach sees under the Class Quality tab</h3>
 <div class="sc1" style="margin-bottom:20px">
 <ul class="nlist">
-<li><b>Class Quality Rating and badge</b></li>
+<li><b>Coaching Rating and badge</b></li>
 <li><b>Trends over the last six classes</b> &mdash; Professionalism at rubric level; Instructional Delivery down to the sub-rubric level</li>
 <li><b>Class Quality Score for each class</b>, with its rating</li>
 <li><b>Access to the report of each class</b></li>
@@ -351,7 +351,7 @@ reused: 25 instructional, 4 professionalism.</div>
 <div class="sub2">One rating follows a coach. Everything below builds up to it, and nothing else feeds it.</div>
 <div class="hero">
   <div class="hero__tag">the final rating</div>
-  <div class="hero__eq">Class Quality Rating = band( round( mean( SQ ), 1 ) )</div>
+  <div class="hero__eq">Coaching Rating = band( round( mean( SQ ), 1 ) )</div>
   <div class="hero__legs">
     <span><b>SQ</b> = round( mean( last 6 CQS ), 1 )<i>per student, rolling &mdash; flagged classes included</i></span>
     <span><b>CQS</b> = max( ID &minus; &Sigma; d(i), B )<i>one class &mdash; never below the base, never above ID</i></span>
@@ -362,7 +362,7 @@ reused: 25 instructional, 4 professionalism.</div>
 </div>
 <div class="tw"><table style="min-width:900px">
 <thead><tr><th style="width:44px"></th><th style="width:250px">What it produces</th><th>Formula</th><th style="width:270px">Range</th></tr></thead>
-<tbody><tr><td class="n">F0</td><td class="par">Flag check</td><td class="fx">Video red or Audio red → class is Flagged; F4 and F5 do not run</td><td style="color:var(--ink-3)"><span class="flag"><i></i>Flagged Class</span> — scored by F5b, 0.0 to 3.0. Enters the Review Cycle. Payout clawed back per policy.</td></tr><tr><td class="n">F1</td><td class="par">Rubric score</td><td class="fx">r(k) ∈ {0, 1, 2}   for k = 1…5</td><td style="color:var(--ink-3)">0 = <span class="band"><i style="background:var(--bad)"></i>Must Fix</span> · 1 = <span class="band"><i style="background:var(--warn)"></i>Needs Work</span> · 2 = <span class="band"><i style="background:var(--good)"></i>All Good</span></td></tr><tr><td class="n">F2</td><td class="par">Instructional Delivery score (ID)</td><td class="fx">ID = Σ r(k)</td><td style="color:var(--ink-3)">0 – 10, in whole numbers</td></tr><tr><td class="n">F3</td><td class="par">Professionalism deduction</td><td class="fx">d(i) = 0 if not flagged · 0.5 amber · 1.0 red</td><td style="color:var(--ink-3)">Camera angle and Lighting: 0.5 or 1.0. Video and Audio: 0.5 amber — red flags the class instead</td></tr><tr><td class="n">F4</td><td class="par">Professionalism Base (B)</td><td class="fx">B = 3 − Σ d(i)</td><td style="color:var(--ink-3)">3.0 when nothing is flagged · 0.0 on the worst valid class — two ambers and two reds sum to exactly 3.0</td></tr><tr><td class="n">F5</td><td class="par">Class Quality Score (CQS)</td><td class="fx">CQS = round( max( ID − Σ d(i), B ), 1 )</td><td style="color:var(--ink-3)">0.0 – 10.0. Clean setup: equal to ID, never below 3.0. A flag costs the same off the score and the base. Never above ID</td></tr><tr><td class="n">F5b</td><td class="par">Flagged class</td><td class="fx">CQS = round( max( 0, 0.3 × ID − Σ d(other) / 2 ), 1 )</td><td style="color:var(--ink-3)">0.0 – 3.0 — always <span class="band"><i style="background:var(--bad)"></i>Red</span>. Every other flag on the class costs half rate: 0.25 amber, 0.5 red — a second flagging red counts as a red</td></tr><tr><td class="n">F6</td><td class="par">Rating</td><td class="fx">band(CQS) = band(SQ) = band(Overall)</td><td style="color:var(--ink-3)"><span class="band"><i style="background:var(--bad)"></i>Red</span> 0 to &lt; 4 · <span class="band"><i style="background:var(--warn)"></i>Amber</span> ≥ 4 and &lt; 7 · <span class="band"><i style="background:var(--good)"></i>Green</span> ≥ 7 and ≤ 10 · any rubric at 0 (Must Fix) shows the class Red, number unchanged</td></tr><tr><td class="n">F7</td><td class="par">Student Class Quality (SQ)</td><td class="fx">SQ(j) = round( mean( CQS of the last 6 classes for that student ), 1 )</td><td style="color:var(--ink-3)">Rolling, one decimal — the newest class pushes the seventh-oldest out. Flagged classes enter at their 0 to 3 score</td></tr><tr><td class="n">F8</td><td class="par">Class Quality Rating (Overall Rating)</td><td class="fx">Overall = round( mean( SQ(j) ) over all students, 1 )</td><td style="color:var(--ink-3)">0.0 – 10.0, one decimal</td></tr></tbody></table></div>
+<tbody><tr><td class="n">F0</td><td class="par">Flag check</td><td class="fx">Video red or Audio red → class is Flagged; F4 and F5 do not run</td><td style="color:var(--ink-3)"><span class="flag"><i></i>Flagged Class</span> — scored by F5b, 0.0 to 3.0. Enters the Review Cycle. Payout clawed back per policy.</td></tr><tr><td class="n">F1</td><td class="par">Rubric score</td><td class="fx">r(k) ∈ {0, 1, 2}   for k = 1…5</td><td style="color:var(--ink-3)">0 = <span class="band"><i style="background:var(--bad)"></i>Must Fix</span> · 1 = <span class="band"><i style="background:var(--warn)"></i>Needs Work</span> · 2 = <span class="band"><i style="background:var(--good)"></i>All Good</span></td></tr><tr><td class="n">F2</td><td class="par">Instructional Delivery score (ID)</td><td class="fx">ID = Σ r(k)</td><td style="color:var(--ink-3)">0 – 10, in whole numbers</td></tr><tr><td class="n">F3</td><td class="par">Professionalism deduction</td><td class="fx">d(i) = 0 if not flagged · 0.5 amber · 1.0 red</td><td style="color:var(--ink-3)">Camera angle and Lighting: 0.5 or 1.0. Video and Audio: 0.5 amber — red flags the class instead</td></tr><tr><td class="n">F4</td><td class="par">Professionalism Base (B)</td><td class="fx">B = 3 − Σ d(i)</td><td style="color:var(--ink-3)">3.0 when nothing is flagged · 0.0 on the worst valid class — two ambers and two reds sum to exactly 3.0</td></tr><tr><td class="n">F5</td><td class="par">Class Quality Score (CQS)</td><td class="fx">CQS = round( max( ID − Σ d(i), B ), 1 )</td><td style="color:var(--ink-3)">0.0 – 10.0. Clean setup: equal to ID, never below 3.0. A flag costs the same off the score and the base. Never above ID</td></tr><tr><td class="n">F5b</td><td class="par">Flagged class</td><td class="fx">CQS = round( max( 0, 0.3 × ID − Σ d(other) / 2 ), 1 )</td><td style="color:var(--ink-3)">0.0 – 3.0 — always <span class="band"><i style="background:var(--bad)"></i>Red</span>. Every other flag on the class costs half rate: 0.25 amber, 0.5 red — a second flagging red counts as a red</td></tr><tr><td class="n">F6</td><td class="par">Rating</td><td class="fx">band(CQS) = band(SQ) = band(Overall)</td><td style="color:var(--ink-3)"><span class="band"><i style="background:var(--bad)"></i>Red</span> 0 to &lt; 4 · <span class="band"><i style="background:var(--warn)"></i>Amber</span> ≥ 4 and &lt; 7 · <span class="band"><i style="background:var(--good)"></i>Green</span> ≥ 7 and ≤ 10 · any rubric at 0 (Must Fix) shows the class Red, number unchanged</td></tr><tr><td class="n">F7</td><td class="par">Student Class Quality (SQ)</td><td class="fx">SQ(j) = round( mean( CQS of the last 6 classes for that student ), 1 )</td><td style="color:var(--ink-3)">Rolling, one decimal — the newest class pushes the seventh-oldest out. Flagged classes enter at their 0 to 3 score</td></tr><tr><td class="n">F8</td><td class="par">Coaching Rating (Overall Rating)</td><td class="fx">Overall = round( mean( SQ(j) ) over all students, 1 )</td><td style="color:var(--ink-3)">0.0 – 10.0, one decimal</td></tr></tbody></table></div>
 
 <h3 class="h3">What each professionalism flag deducts</h3>
 <div class="sub2">Every amber costs 0.5 off the score and the base. A red Camera angle or Lighting flag costs 1.0. Video and Audio red flag the class instead of deducting &mdash; and inside a flagged class every other flag costs half: 0.25 amber, 0.5 red.</div>
@@ -493,7 +493,7 @@ reused: 25 instructional, 4 professionalism.</div>
 <div class="sub2">The coach-facing guide &mdash; how the rating works and what a perfect class looks like. No thresholds, no formulas, no internal verbs.</div>
 
 <div class="sc1" style="margin-bottom:20px"><b>The Review Cycle</b>
-<p>Your <b>Class Quality Rating</b> reflects how well your most recent Review Cycle delivered The Cuemath Way. <span style="color:var(--ink-3)">One Review Cycle consists of your most recent 6 classes per student, for all students.</span></p></div>
+<p>Your <b>Coaching Rating</b> reflects how well your most recent Review Cycle delivered The Cuemath Way. <span style="color:var(--ink-3)">One Review Cycle consists of your most recent 6 classes per student, for all students.</span></p></div>
 
 <h3 class="h3">Your rating, in plain words</h3>
 <div class="sub2">Two things shape it: <b>Instructional Delivery</b> and <b>Professionalism</b>. Teach well on every rubric, keep the basics clean, and the top rating follows.</div>
@@ -538,7 +538,7 @@ Standalone version: <code>cuemath-way-rubrics-onepager.html</code>.</div>
 <div class="sc1"><b>What is a Review Cycle?</b>
 <p>Your most recent 6 classes with each of your students, across all your students. The cycle rolls &mdash; every reviewed class enters, and the oldest with that student drops out.</p></div>
 
-<div class="sc1"><b>How is my Class Quality Rating decided?</b>
+<div class="sc1"><b>How is my Coaching Rating decided?</b>
 <p>Every class is analysed as per The Cuemath Way across your latest Review Cycle &mdash; the Instructional Delivery rubrics plus the Professionalism basics.</p></div>
 
 <div class="sc1"><b>Why did my rating change when I only taught one class?</b>
